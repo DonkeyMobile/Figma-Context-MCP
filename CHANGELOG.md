@@ -1,5 +1,21 @@
 # figma-developer-mcp
 
+## [0.12.0](https://github.com/GLips/Figma-Context-MCP/compare/v0.11.0...v0.12.0) (2026-04-30)
+
+
+### Features
+
+* support per-request Figma API keys ([#365](https://github.com/GLips/Figma-Context-MCP/issues/365)) ([fe3b504](https://github.com/GLips/Figma-Context-MCP/commit/fe3b504d75b671896a557188a9ad801b7bac40ee))
+
+
+### Bug Fixes
+
+* guide LLMs to fix bad node-id errors (proto/branch/figjam URLs) ([#371](https://github.com/GLips/Figma-Context-MCP/issues/371)) ([c6697bc](https://github.com/GLips/Figma-Context-MCP/commit/c6697bc492f0d25c4fff469c471820dede1c7e5c))
+* **images:** omit null imageRef so foreign-pasted images render via nodeId ([#368](https://github.com/GLips/Figma-Context-MCP/issues/368)) ([166f87d](https://github.com/GLips/Figma-Context-MCP/commit/166f87dcc610634a0e067dd5acc03d1fc0c411a4))
+* **mcp:** prevent late progress notifications from crashing stdio clients ([#366](https://github.com/GLips/Figma-Context-MCP/issues/366)) ([b97585c](https://github.com/GLips/Figma-Context-MCP/commit/b97585caf502f0e0b41cfd8f0a2f3f11559e1e77))
+* reject ambiguous localPath inputs in download_figma_images ([#367](https://github.com/GLips/Figma-Context-MCP/issues/367)) ([eaeec68](https://github.com/GLips/Figma-Context-MCP/commit/eaeec68041584114acb23cda05b8838a5e204341))
+* surface Figma 403 response body to help LLMs self-heal based on actual error ([#360](https://github.com/GLips/Figma-Context-MCP/issues/360)) ([12280ba](https://github.com/GLips/Figma-Context-MCP/commit/12280ba22a8d398c35db360a336356430dd0b182))
+
 ## [0.11.0](https://github.com/GLips/Figma-Context-MCP/compare/v0.10.1...v0.11.0) (2026-04-20)
 
 
