@@ -340,4 +340,14 @@ export class FigmaService {
 
     return result;
   }
+
+  /**
+   * Get comments for a Figma file.
+   */
+  async getComments(fileKey: string): Promise<any[]> {
+    const endpoint = `/files/${fileKey}/comments`;
+    Logger.log(`Retrieving comments for file: ${fileKey}`);
+    const response = await this.request<{ comments: any[] }>(endpoint);
+    return response.comments;
+  }
 }

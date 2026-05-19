@@ -7,8 +7,10 @@ import type { ToolExtra } from "./progress.js";
 import {
   downloadFigmaImagesTool,
   getFigmaDataTool,
+  getFigmaCommentsTool,
   type DownloadImagesParams,
   type GetFigmaDataParams,
+  type GetFigmaCommentsParams,
 } from "./tools/index.js";
 
 const serverInfo = {
@@ -112,6 +114,18 @@ function registerTools(
         ),
     );
   }
+
+  server.registerTool(
+    getFigmaCommentsTool.name,
+    {
+      title: "Get Figma Comments",
+      description: getFigmaCommentsTool.description,
+      inputSchema: getFigmaCommentsTool.parametersSchema,
+      annotations: { readOnlyHint: true },
+    },
+    (params: GetFigmaCommentsParams, extra: ToolExtra) =>
+      getFigmaCommentsTool.handler(params, figmaService, extra),
+  );
 }
 
 export { createServer };
